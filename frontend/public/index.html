@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- styles  -->
+    <link rel="stylesheet" href="assets/main-page/style.css">
+    <title>whatapp</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .the-big-parent{
+            /* background: linear-gradient( #000000b3,#000000b3) ,url(assets/main-page/chatapp.background.jpg); */
+            background: rgb(36, 36, 36);
+            background-size: 100%;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="the-big-parent">
+        <div class="msgs " >
+            <div class="msg rec">hello whats app</div>
+            <div class="msg sent">good, and you?</div>
+        </div>
+        <form class="inputs">
+            <div class="msg" contenteditable="true"></div>
+            <button type="submit"></button>
+        </form>
+    </div>
+
+    <div>
+    </div>
+  </body>
+</html>
+
+<!--*
+    * msgs that has msgs rec is stand for recieve
+
+ -->

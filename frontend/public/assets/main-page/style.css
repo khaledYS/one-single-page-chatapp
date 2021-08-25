@@ -1,0 +1,99 @@
+:root{
+    --msg-border-radius: 8px;
+}
+
+/* the msgs container */
+.msgs:not([contenteditable]){
+    font-family: sans-serif;
+    padding: 4px 5px;
+}
+
+/* the msg */
+.msgs > .msg{
+    font-size: 1.3rem;
+    box-shadow: -3px 5px 29px -7px black;
+}
+
+/* the recieved msgs */
+.msgs > .msg.rec{
+    margin: 4px 0;
+    padding: 4px 6px;
+    background: rgb(112 199 143);
+    color: black;
+    max-width: max-content;
+    border: 2px solid rgb(141, 141, 141);
+    border-radius: var(--msg-border-radius) var(--msg-border-radius) var(--msg-border-radius) 0px;
+}
+
+/* the sent msgs */
+.msgs > .msg.sent{
+    margin: 4px 0;
+    padding: 4px 6px;
+    background: #cbee95;
+    border: 2px solid #6d6d6d;
+    color: black;
+    width: max-content;
+    margin-left: auto;
+    border-radius: var(--msg-border-radius) 0px var(--msg-border-radius) var(--msg-border-radius);
+}
+
+/* the container of the inputs */
+.inputs{
+    display: flex;
+    padding: 0 3px;
+    font-family: sans-serif;
+    max-width: 100vw;   
+    overflow-x: hidden;
+    margin-bottom: 4px;
+    max-height: 60%;
+}
+/* the input of the msg */
+.inputs > .msg{
+    padding-top:10px ;
+    min-height: 40px;
+    max-height: 100%;
+    overflow: auto;
+    width: 95%;
+    max-width: 95%;
+    margin-right: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.5rem;
+    display: block;
+    appearance: none;
+    outline: none;
+    border: 2px solid rgb(76, 189, 119);
+    background: rgb(48, 48, 48);
+    border-radius: 3px;
+    color: white;
+    transition: all .5s ease;
+}
+/* when focusing on the input  */
+.inputs > .msg:focus{
+    background: rgb(59, 59, 59);
+}
+/* the submit button */
+.inputs > [type="submit"]{
+    appearance: none;
+    font-weight: 500;
+    outline: none;
+    border: 2px solid black;
+    width: 5%;
+    border-radius: 9px;
+    cursor: pointer;
+    background: rgb(76, 189, 119);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* an after element to create a arrow icon like send */
+.inputs > [type="submit"]::after{
+    --arrow-color: rgb(0, 0, 0);
+    content: ' ';
+    display: inline-block;
+    width: 4px;
+    border-right: 2px solid var(--arrow-color);
+    border-bottom: 2px solid var(--arrow-color);
+    height: 4px;
+    transform: translateX(-29%) scale(2) rotate(-40deg);
+}
