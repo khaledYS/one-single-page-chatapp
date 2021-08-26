@@ -12,6 +12,8 @@
 .msgs > .msg{
     font-size: 1.3rem;
     box-shadow: -3px 5px 29px -7px black;
+    width: max-content;
+    max-width: 70%;
 }
 
 /* the recieved msgs */
@@ -20,7 +22,6 @@
     padding: 4px 6px;
     background: rgb(112 199 143);
     color: black;
-    max-width: max-content;
     border: 2px solid rgb(141, 141, 141);
     border-radius: var(--msg-border-radius) var(--msg-border-radius) var(--msg-border-radius) 0px;
 }
@@ -32,7 +33,6 @@
     background: #cbee95;
     border: 2px solid #6d6d6d;
     color: black;
-    width: max-content;
     margin-left: auto;
     border-radius: var(--msg-border-radius) 0px var(--msg-border-radius) var(--msg-border-radius);
 }
@@ -78,7 +78,7 @@
     font-weight: 500;
     outline: none;
     border: 2px solid black;
-    width: 5%;
+    width: clamp(70px , 5% , 120px);
     border-radius: 9px;
     cursor: pointer;
     background: rgb(76, 189, 119);
